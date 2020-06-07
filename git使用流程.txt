@@ -1,8 +1,24 @@
 1. git init //初始化仓库
 
-2. git add .(文件name) //添加文件到本地仓库
+git config --global user.name''
+git config --global user.email''
+git config --list #查看git信息 
+q 退出
 
+git clone 仓库地址 #将远程仓库克隆到本地
+
+2. git add .(文件name) //添加文件到本地仓库
+	git status
 3. git commit -m "first commit" //添加文件描述信息
+
+dir #查看文件夹
+mkdir #新建文件夹
+vi 文件 #编辑文件
+cat 文件 #查看文件
+rm -rf 文件 #删除文件
+git rm 文件 #git删除文件后同步到远程仓库
+git commmit -m ''
+git push -u origin master
 
 4. git remote add origin + 远程仓库地址 //链接远程仓库，创建主分支
 
