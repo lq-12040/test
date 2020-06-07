@@ -1,0 +1,14 @@
+个人站点
+  访问：https://用户名.github.io
+  搭建步骤
+    1.创建个人站点->新建仓库（注：仓库名必须是【用户名.github.io】）
+    2.在仓库下新建index.html的文件即可
+脚下留心：
+  1、github pages 仅支持静态网页
+  2、仓库中只能是.html文件
+
+Project Pages 项目站点
+  https://用户名.github.io/仓库名
+  搭建步骤
+    1、进入项目主页，点击settings
+    2、在settings页面，点击choose the theme 再自动生成主页面
