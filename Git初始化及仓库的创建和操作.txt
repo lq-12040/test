@@ -1,0 +1,105 @@
+基本信息设置：
+  1.设置用户名
+	git config --global user.name 'lq-12040'
+  2.设置用户名邮箱
+	git config --global user.email '1204019466@qq.com'
+初始化新的Git仓库
+  1.创建新的文件夹（Linux命令）mkdir ？？
+  2.在文件内初始化git（创建git仓库）注意：是文件内
+	git init
+  3.向仓库添加文件
+	git status
+	touch a1.php(创建新的文件)
+	git status
+	git add a1.php(将文件添加入暂存区)
+	git status
+	git commit -m 'add a1.php'(将文件添加入Git仓库)
+	git status
+
+	解决方法是当出现这个上述提示后 接着补充：
+		git config --global user.email "你的邮箱"
+		git config --global user.name "你的名字"
+		git commit
+  4.将本地仓库同步到git远程仓库中：
+	git push
+     git克隆操作目的：将远程仓库（GitHub对应的项目）复制到本地
+	git clone 仓库地址
+	git clone https://github.com/lq-12040/test.git
+    克隆之后再  git push（是本地同步到远程仓库）
+
+
+**设置权限：.git/config  中将
+	[remote "origin"]
+	url = https://github.com/lq-12040/test.git
+	修改为：
+	[remote "origin"]
+	url = https://用户名:密码@github.com/lq-12040/test.git
+
+1.修改文件
+	vi a1.php
+	cat a1.php
+	git status
+2.修改后添加入仓库
+	git add a1.php
+	git status
+	git commit -m '第一次通过git修改了文件并提交到仓库'
+	git status
+删除文件
+	rm -rf a1.php
+	git rm a1.php
+	git commit -m '第一次通过git删除仓库文件'
+
+
+linux vim编辑器操作  https://blog.csdn.net/xiajun07061225/article/details/7039413
+vim编辑器  ：按 Esc 进入命令模式， 输入 Shift + ； 进入末行模式，按i进入输入模式。
+
+:wq  末行模式，保存退出
+:q     末行模式，直接退出
+:q!    末行模式，不保存，强制退出
+
+输入模式（在命令模式下操作）
+i    从光标所在位置前面开始插入    
+I    在当前行首插入    
+a   从光标所在位置后面开始输入    
+A   在当前行尾插入    
+o   在光标所在行下方新增一行并进入输入模式    
+O  在当前上面一行插入
+
+移动光标（在命令模式下操作）
+
+ gg    到文件第一行    
+ G      到文件最后一行   (Shift + g)    
+^      非空格行首    
+0       行首(数字0)    
+$       行尾
+
+复制和粘贴（在命令模式下操作）
+
+yy    复制整行内容     如3yy就是复制3行内容    
+yw   复制当前光标到单词尾内容    
+p      粘贴
+
+
+dd  删除光标所在行    
+dw  删除一个单词    
+x     删除光标所在字符    
+u    撤销上一次操作    
+s     替换    
+ctrl + r    撤销   u
+
+块操作
+
+ v    块选择    
+ctrl + v   列块选择
+
+查找
+
+/    命令模式下输入：/   向前搜索    
+?    命令模式下输入：?   向后搜索    
+n    向下查找    
+N   向上查找
+
+运行py文件
+
+在vim内，在命令模式下按F5
+退出vim，在终端输入 pyhton3 filename
